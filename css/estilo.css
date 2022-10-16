@@ -1,0 +1,759 @@
+/*///////////FONTS TITULOS////////////////////////////////////////////////*/
+@font-face{
+	font-family: "DancingScript-Regular";
+	src: url(../fonts/DancingScript-Regular.ttf);
+}
+/*///////////FONTS SUB-TITULOS////////////////////////////////////////////*/
+@font-face{
+	font-family: "Parisienne-Regular";
+	src: url(../fonts/Parisienne-Regular.ttf);
+}
+/*///////////ZIBA FONTS///////////////////////////////////////////////////*/
+@font-face{
+	font-family: "Fairweather-Bold";
+	src: url(../fonts/Fairweather-Bold.ttf);
+}
+/*///////////			//////////////////////////////////////////////////*/
+body{
+	width: 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.ziba-title{
+	font-family: "Fairweather-Bold", sans-serif;
+}
+
+.title{
+	font-family: "DancingScript-Regular", sans-serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+.sub-title{
+	font-family: "Parisienne-Regular", sans-serif;
+}
+
+:root{
+	--main-color: rgb(205,105,50);
+	--secondary-color: rgb(255,170,51);
+}
+
+.normal-select::selection{
+	background-color: var(--main-color);
+	color: white;
+}
+
+.invert-select::selection{
+	background-color: white;
+	color: var(--main-color);
+}
+
+.bkg-D-select::selection{
+	background: rgb(205,105,50,.7);
+    color: white;
+}
+
+.bkg-L-select::selection{
+	background: rgb(255,170,51,.55);
+    color: white;
+}
+
+.container--flex{
+	display: flex;
+}
+
+/*///////////HEADER///////////////////////////////////////////////////////*/
+.header--title{
+	color: var(--secondary-color);
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.menu--icon{
+	color: var(--secondary-color);
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 4px 7px 3px 7px;
+	font-size: 16px;
+	transition: all 0.5s;
+}
+
+.menu--icon:hover{
+	cursor: pointer;
+	color: white;
+	border: 1px solid var(--secondary-color);
+}
+
+.header--container{
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+}
+
+.menu{
+	z-index: 999;
+	position: absolute;
+	background: #7c3f1e;
+	top: 41px;
+	right: 0;
+	width: 100%;
+	height: 410px;
+	border-radius: 25px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+}
+
+.mostrar{
+	opacity: 1;
+	visibility: visible;
+}
+
+.menu--items{
+	padding: 10px;
+	text-align: center;
+}
+
+.menu--links{
+	display: block;
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+.menu--links:hover{
+	background: #915332;
+}
+
+.menu--social{
+	display: flex;
+	justify-content: center;
+}
+
+.menu--social--links{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+.menu--social--links:hover{
+	background: #7c3f1e;
+	outline: 3px solid #5e2100;
+	transition: all .2s;
+}
+
+.menu--social--links i{
+	position: relative;
+	font-size: 30px;
+}
+
+.menu-btn-ig{
+	background: radial-gradient(
+		circle at 33% 100%,
+		#fed373 4%,
+		#f15245 30%,
+		#d92e7f 62%,
+		#9b36b7 85%,
+		#515ecf);
+	color: white;
+}
+
+.menu-btn-tw{
+	background: #1da1f2;
+	color: white;
+}
+
+.panel--fondo{
+	/*img*/
+	background: url(../imgs/ziba_pasteleria_chocotorta_480x480.jpg);
+	min-height: 325px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	z-index: -999;
+	/*center the text*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.panel--fondo:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background:	rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -980;
+}
+
+.panel--content{
+	color: white;
+	font-size: 28px;
+	text-align: center;
+	width: 90%;
+
+}
+
+.panel--title{
+	margin: 10px;
+	padding: 10px;
+}
+
+.panel--txt{
+	margin: 10px;
+	padding: 10px;	
+}
+/*///////////MAIN///////////////////////////////////////////////////////*/
+.main{
+	position: relative;
+	margin-top: 300px;
+}
+
+section{
+	margin: 100px 0 100px 0;
+}
+
+/*///////////SECTION 1///////////////////////////////////////////////////////*/
+.contact--container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.contact--txt-container{
+	width: 90%;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+}
+
+.contact--title{
+	margin: 5px;
+	padding: 5px;
+	font-size: 28px;
+	color: var(--main-color);
+	font-weight: bold;
+	position: relative;
+}
+
+.contact--title:before{
+	content: "";
+	width: 50%;
+	position: absolute;
+	top: -10px;
+	left: 0;
+	transform: translateX(50%);
+	height: 3px;
+	background: var(--main-color);
+	border-radius: 3px;
+}
+
+.contact--txt{
+	padding: 5px;
+}
+
+.contact--btn--ig{
+	color: var(--main-color);
+
+	text-decoration: none;
+	background: 
+    	linear-gradient(white,white) padding-box,
+    	linear-gradient(180deg,
+     		rgb(205,105,50)  15%,
+     		rgb(255,170,51) 100%) border-box;
+    color: rgb(205,105,50);
+    border: 3px solid transparent;
+    border-radius: 15px;
+	font-size: 15px; 
+	margin: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: .5s all ease;
+}
+
+.contact--btn--ig:hover{
+	background:
+		linear-gradient(180deg,
+     		rgb(205,105,50)  15%,
+     		rgb(255,170,51) 100%) border-box;
+	color: white;
+}
+
+.btn-ig-icon{
+	font-size: 26px;
+}
+
+.btn-ig-txt{
+	font-size: 16px;
+}
+
+/*///////////SECTION PRODUCTS///////////////////////////////////////////////////////*/
+.products--container{
+	margin: 20px 0;
+	max-width: 100%;
+	flex-wrap: wrap;
+}
+
+.products--items{
+	position: relative;
+	width: 100%;
+	outline: 3px solid var(--secondary-color);
+}
+
+.products--items:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background:	rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.product--title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.product--title:before{
+	content: "";
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	height: 3px;
+	background: var(--secondary-color);
+	border-radius: 3px;
+}
+
+.product--title:after{
+	content: "";
+	width: 100%;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	height: 3px;
+	background: var(--secondary-color);
+	border-radius: 3px;
+}
+
+.product--img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*///////////SECTION COMBOS///////////////////////////////////////////////////////*/
+.combos--container{
+	margin: 10px 0;
+}
+
+.combos--txt--container{
+	width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+}
+
+.combos--title{
+	color: var(--main-color);
+	font-weight: bold;
+	margin: 5px;
+	padding: 5px;
+}
+
+.combos--txt{
+	margin: 5px;
+	padding: 5px;
+	font-size: 19px; 
+}
+
+.combos--items--container{
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.combos--item{
+	width: 90%;
+	background-color: var(--main-color);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+}
+
+.combos--item--title{
+	width: 100%;
+	margin: auto;
+	padding: 5px;
+}
+
+.combos--item--content--container{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.combos--item--price{
+	width: 20%;
+	text-align: center;
+	padding: 5px;
+	padding-top: 60px; 
+}
+
+.price1{
+	width: 30%;
+	padding-top: 18px;
+}
+
+.combos--item--product{
+	width: 75%;
+	padding: 5px;
+}
+
+.product1{
+	width: 60%;
+}
+
+.combos--item--product--content{
+	padding: 2px;
+}
+
+/*///////////SECTION CATALOGUE///////////////////////////////////////////////////////*/
+.catalogue--container{
+	flex-direction: column;
+	text-align: center;
+	margin: 30px 0 150px;
+}
+
+.catalogue--title{
+	color: var(--main-color);
+	font-weight: bold;
+	margin: 5px;
+	padding: 5px;
+}
+
+.catalogue--txt{
+	margin: 5px;
+	padding: 5px;
+	font-size: 19px;
+}
+
+.catalogue--link{
+	width: 50%;
+	text-decoration: none;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    color: var(--main-color);
+    margin: 10px;
+    padding: 10px;
+    font-size: 17px;
+    transition: all .3s;
+    align-self: center;
+}
+
+.catalogue--link:hover{
+	background: rgb(205,105,50);
+    color: white;
+}
+
+/*///////////FOOTER///////////////////////////////////////////////////////*/
+.footer{
+	background-color: var(--main-color);
+}
+
+.footer--container{
+	color: white;
+}
+
+.footer--logo--container{
+	padding: 10px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer--logo{
+	background: url(../imgs/ziba_pasteleria_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 100%;
+    height: 175px;
+    margin: 10px;
+}
+
+.footer--txt{
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+}
+
+.footer--sections--container{
+	flex-wrap: wrap;
+	padding: 10px 20px 10px 20px;
+	justify-content: space-evenly;
+}
+
+.footer--section{
+	width: 100%;
+	margin: 5px;
+	padding: 5px;
+	box-shadow: -1px -1px 0 var(--secondary-color);
+	margin-bottom: 20px;
+}
+
+.footer--section--title{
+	font-size: 26px;
+	margin: 5px;
+	padding: 15px 5px 5px 15px;
+}
+
+.footer--section--social{
+	margin-left: 50px;
+}
+
+.footer--social--item{
+	margin-bottom: 5px
+}
+
+.footer--social--icon{
+	color: #EEEEEE;
+	display: inline-block;
+}
+
+.footer--social--link{
+	text-decoration: none;
+	color: #EEEEEE;
+	display: inline-block;
+}
+
+.footer--products{
+	margin-left: 50px;
+}
+
+.footer--product--link{
+	color: #EEEEEE;
+}
+
+.footer--product--item{
+	color: white;
+	margin-bottom: 5px;
+}
+
+.footer--section--txt{
+	width: 95%;
+	text-align: justify;
+	color: #EEEEEE;
+	padding-left: 50px;
+}
+
+.linkInText{
+	text-decoration: underline;
+}
+
+.footer--copy{
+	width: 100%;
+	text-align: center;
+	padding: 15px;
+}
+
+@media screen and (min-width: 510px){
+	.product1{
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 645px){
+	.product1{
+		width: 35%;
+	}
+
+	.catalogue--link{
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 700px){
+	.header--title{
+		font-size: 30px;
+	}
+
+	.menu--icon{
+		font-size: 20px;
+	}
+
+	.menu{
+		top: 46px;
+		right: 0;
+		width: 60%;
+	}
+
+	.menu--items{
+		width: 60%;
+	    transform: translateX(35%);
+	}
+
+	.panel--fondo{
+		min-height: 480px; 
+	}
+
+	.panel--title{
+		font-size: 50px;
+	}
+
+	.panel--txt{
+		font-size: 30px;
+	}
+
+	.contact{
+		margin-top: 500px;
+	}
+
+	.products--items{
+		width: 50%;
+		outline: 2px solid var(--secondary-color);
+	}
+
+	.combos--item{
+		width: 45%;
+	}
+
+	.product1{
+		width: 45%;
+		font-size: 18px;
+	}
+
+	.price2{
+		font-size: 30px;
+	}
+
+	.footer--txt{
+		padding: 10px 200px 10px 200px;
+	}
+
+	.footer--section{
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.title{
+		font-size: 40px;
+	}
+
+	.menu--icon{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.menu{
+		background-color: transparent;
+		width: 80%;
+		height: 60px;
+		top: 0;
+		right: 0;
+		display: flex;
+    	justify-content: flex-end;
+    	opacity: 1;
+		visibility: visible;
+	}
+
+	.menu--items{
+		display: inline-block;
+		width: auto;
+		transform: translateX(0%);
+	}
+
+	.menu--links{
+		font-size: 19px;
+		color: wheat;
+	}
+
+	.inicio{
+		display: none;
+	}
+
+	.menu--links:hover{
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	.menu--social{
+		display: inline-flex;
+	}
+
+	.menu--social--links{
+		height: 30px;
+		width: 30px;
+		padding: 6px;
+	}
+
+	.menu--social--links:hover{
+		background: transparent; 
+    	outline: 2px solid white;
+    	transition: all .2s;
+	}
+
+	.menu--social--links i {
+		font-size: 20px;
+	}
+
+	.combos--item--product {
+    	width: 55%;
+	}
+
+	.product1{
+		width: 40%;
+	}
+
+	.catalogue--link{
+		width: 25%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
